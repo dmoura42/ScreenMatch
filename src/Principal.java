@@ -1,19 +1,29 @@
+import br.com.alura.screenmatch.modelos.Filme;
+import br.com.alura.screenmatch.modelos.Serie;
+
 public class Principal {
     public static void main(String[] args) {
-        Filme favorito = new Filme();
-        favorito.nome = "The Matrix";
-        favorito.anoDeLancamento = 1999;
-        favorito.duracaoEmMinutos = 136;
-        favorito.incluidoNoPlano = true;
+        Filme meuFilme = new Filme();
+
+        meuFilme.setNome("The Matrix");
+        meuFilme.setAnoDeLancamento(1999);
+        meuFilme.setDuracaoEmMinutos(136);
+        meuFilme.setIncluidoNoPlano(true);
 
 
-        favorito.exibeFichaTecnica();
-        favorito.avalia(8);
-        favorito.avalia(8);
-        favorito.avalia(10);
-        System.out.println(favorito.somaDasAvaliacoes);
-        System.out.println(favorito.totalDeAvaliacoes);
-        System.out.println("Média de avaliações do filme: " + favorito.pegaMedia()68);
+        meuFilme.exibeFichaTecnica();
+        meuFilme.avalia(8);
+        meuFilme.avalia(8);
+        meuFilme.avalia(10);
+
+        System.out.println("Média das avaliações do filme: " + meuFilme.pegaMedia());
+
+        Serie lost = new Serie();
+        lost.setNome("Lost");
+        lost.setAnoDeLancamento(2000);
+        lost.exibeFichaTecnica();
+        lost.setTemporadas(10);
+        lost.setEpisodiosPorTemporada(10);
 
     }
 }
